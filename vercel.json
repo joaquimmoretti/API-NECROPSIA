@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "PORT": "3000",
+    "DROPBOX_TOKEN": "@dropbox_token",
+    "DROPBOX_FOLDER": "@dropbox_folder",
+    "PDFSHIFT_API_KEY": "@pdfshift_api_key"
+  }
+}
